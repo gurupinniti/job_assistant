@@ -1,0 +1,31 @@
+{
+    "_description": "Cover letter structure templates. LLM fills the [PLACEHOLDERS] rather than generating structure from scratch. Saves ~300 tokens per cover letter.",
+    "_version": "1.0",
+  
+    "standard": {
+      "structure": [
+        "Opening: Hook showing genuine interest + strongest fit point for THIS specific role",
+        "Middle: 2-3 specific quantified achievements that directly match the top JD requirements",
+        "Close: Confident call to action + availability"
+      ],
+      "word_count_target": 250,
+      "tone": "warm but professional",
+      "forbidden_openers": [
+        "I am writing to apply",
+        "I am excited to apply",
+        "I would like to apply",
+        "Please find attached",
+        "I am interested in"
+      ]
+    },
+  
+    "senior_roles": {
+      "structure": [
+        "Opening: Strategic vision alignment — what you bring to their specific challenge",
+        "Middle: Two major leadership/impact stories with business outcomes",
+        "Close: Executive presence close — forward-looking partnership framing"
+      ],
+      "word_count_target": 300,
+      "tone": "authoritative and strategic"
+    }
+  }

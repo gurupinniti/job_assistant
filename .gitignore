@@ -1,0 +1,104 @@
+# ╔══════════════════════════════════════════════════════════╗
+# ║  QuickJob Applier — .gitignore                           ║
+# ╚══════════════════════════════════════════════════════════╝
+
+# ── CRITICAL: API keys — NEVER commit ─────────────────────
+quick_job_backend/config.py
+config.py
+
+# ── Python ─────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ── Virtual environments ───────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── Data directories (generated at runtime) ───────────────
+quick_job_applier/quick_job_backend/uploads/
+quick_job_applier/quick_job_backend/job_apply_output/
+quick_job_applier/quick_job_backend/vector_db/
+
+# ── Playwright browsers ───────────────────────────────────
+quick_job_applier/quick_job_backend/.playwright/
+
+# ── Node / React ──────────────────────────────────────────
+quick_job_applier/quick_job_ui/node_modules/
+quick_job_applier/quick_job_ui/build/
+quick_job_applier/quick_job_ui/.pnp
+quick_job_applier/quick_job_ui/.pnp.js
+quick_job_applier/quick_job_ui/coverage/
+quick_job_applier/quick_job_ui/.env
+quick_job_applier/quick_job_ui/.env.local
+quick_job_applier/quick_job_ui/.env.development.local
+quick_job_applier/quick_job_ui/.env.test.local
+quick_job_applier/quick_job_ui/.env.production.local
+quick_job_applier/quick_job_ui/npm-debug.log*
+quick_job_applier/quick_job_ui/yarn-debug.log*
+quick_job_applier/quick_job_ui/yarn-error.log*
+
+# ── OS files ───────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── IDEs ──────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ── Logs ──────────────────────────────────────────────────
+*.log
+logs/
+log/
+
+# ── Test / coverage ───────────────────────────────────────
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+
+# ── Jupyter ───────────────────────────────────────────────
+.ipynb_checkpoints
+*.ipynb
+
+# ── Temporary files ───────────────────────────────────────
+*.tmp
+*.temp
+*.bak
+*.backup

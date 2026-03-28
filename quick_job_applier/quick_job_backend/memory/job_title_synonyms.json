@@ -1,0 +1,48 @@
+{
+    "_description": "Job title synonym groups. When a candidate's current title matches any entry in a group, all other titles in that group are also suggested. Prevents missing roles due to naming variations.",
+    "_version": "1.0",
+  
+    "groups": [
+      ["Data Scientist", "Data Science Engineer", "Applied Scientist", "ML Scientist", "Research Scientist"],
+      ["Machine Learning Engineer", "ML Engineer", "AI Engineer", "MLOps Engineer", "Applied ML Engineer"],
+      ["Senior Data Scientist", "Lead Data Scientist", "Staff Data Scientist", "Principal Data Scientist"],
+      ["Data Engineer", "Data Platform Engineer", "Analytics Engineer", "ETL Engineer", "Big Data Engineer"],
+      ["Software Engineer", "Software Developer", "SWE", "Backend Engineer", "Backend Developer"],
+      ["Senior Software Engineer", "Staff Engineer", "Senior Developer", "Tech Lead", "Senior SWE"],
+      ["Full Stack Developer", "Full Stack Engineer", "Web Developer", "Software Engineer"],
+      ["Frontend Developer", "Frontend Engineer", "UI Developer", "React Developer", "Angular Developer"],
+      ["DevOps Engineer", "Platform Engineer", "Infrastructure Engineer", "SRE", "Cloud Engineer"],
+      ["Product Manager", "PM", "Product Owner", "Technical Product Manager", "Group Product Manager"],
+      ["Data Analyst", "Business Analyst", "Analytics Analyst", "BI Analyst", "Insights Analyst"],
+      ["Financial Analyst", "Finance Analyst", "Investment Analyst", "FP&A Analyst"],
+      ["Engineering Manager", "Engineering Lead", "Tech Lead Manager", "Development Manager"],
+      ["Cloud Architect", "Solutions Architect", "Cloud Solutions Architect", "Enterprise Architect"],
+      ["NLP Engineer", "Computational Linguist", "Natural Language Processing Engineer", "Text Mining Engineer"],
+      ["Computer Vision Engineer", "CV Engineer", "Vision ML Engineer", "Imaging Scientist"]
+    ],
+  
+    "common_misspellings": {
+      "Engieer": "Engineer",
+      "Enginer": "Engineer",
+      "Developper": "Developer",
+      "Develper": "Developer",
+      "Scientest": "Scientist",
+      "Scienist": "Scientist",
+      "Analst": "Analyst",
+      "Anlayst": "Analyst",
+      "Manageer": "Manager",
+      "Mangager": "Manager",
+      "Archtiect": "Architect",
+      "Archetect": "Architect",
+      "Programer": "Programmer",
+      "Specilaist": "Specialist",
+      "Senoir": "Senior",
+      "Juinor": "Junior",
+      "Princpal": "Principal",
+      "Techincal": "Technical",
+      "Artifical": "Artificial",
+      "Intellegence": "Intelligence",
+      "Maching": "Machine",
+      "Lerning": "Learning"
+    }
+  }

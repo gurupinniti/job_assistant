@@ -1,0 +1,175 @@
+{
+    "_description": "Skill-to-job-title mapping. Signals use substring matching — 'pytorch' matches 'pytorch', 'pytorchlightning' etc. Threshold: 1 match is sufficient when resume has recent_titles.",
+    "_version": "2.0",
+  
+    "categories": {
+      "data_science_ml": {
+        "skill_signals": [
+          "machine learning", "tensorflow", "pytorch", "scikit", "scikit-learn",
+          "nlp", "deep learning", "neural network", "xgboost", "lightgbm",
+          "data science", "pandas", "numpy", "mlops", "llm", "large language",
+          "transformers", "bert", "gpt", "llama", "langchain", "rag",
+          "crewai", "autogen", "agentic", "agent", "evidently", "mlflow",
+          "huggingface", "hugging face", "openai", "anthropic", "gemini",
+          "embedding", "vector", "faiss", "chroma", "pinecone", "weaviate",
+          "model deployment", "model serving", "feature engineering",
+          "classification", "regression", "clustering", "recommendation",
+          "time series", "forecasting", "anomaly detection", "cv", "computer vision"
+        ],
+        "titles_by_years": {
+          "0-2":  ["Junior Data Scientist", "Data Science Analyst", "ML Engineer"],
+          "3-5":  ["Data Scientist", "Machine Learning Engineer", "AI Engineer", "NLP Engineer"],
+          "6-9":  ["Senior Data Scientist", "Lead Data Scientist", "Senior ML Engineer", "Senior AI Engineer"],
+          "10+":  ["Principal Data Scientist", "Head of Data Science", "Director of AI", "Chief AI Officer"]
+        }
+      },
+  
+      "data_engineering": {
+        "skill_signals": [
+          "spark", "pyspark", "hadoop", "airflow", "kafka", "databricks",
+          "dbt", "data pipeline", "etl", "elt", "bigquery", "redshift",
+          "snowflake", "data warehouse", "data lake", "data lakehouse",
+          "hive", "presto", "trino", "flink", "nifi", "glue",
+          "data architecture", "data platform", "data infrastructure",
+          "pipeline orchestration", "batch processing", "stream processing",
+          "delta lake", "iceberg", "parquet", "avro"
+        ],
+        "titles_by_years": {
+          "0-2":  ["Junior Data Engineer", "Data Analyst", "Analytics Engineer"],
+          "3-5":  ["Data Engineer", "Analytics Engineer", "Data Platform Engineer"],
+          "6-9":  ["Senior Data Engineer", "Lead Data Engineer", "Data Architect"],
+          "10+":  ["Principal Data Engineer", "Head of Data Engineering", "Chief Data Architect"]
+        }
+      },
+  
+      "software_engineering": {
+        "skill_signals": [
+          "python", "java", "javascript", "typescript", "react", "node",
+          "spring", "spring boot", "django", "fastapi", "flask", "express",
+          "microservices", "rest api", "graphql", "docker", "kubernetes",
+          "ci/cd", "github actions", "jenkins", "software development",
+          "backend", "frontend", "full stack", "api development",
+          "object oriented", "design patterns", "system design",
+          "golang", "go", "rust", "c++", "c#", ".net", "scala"
+        ],
+        "titles_by_years": {
+          "0-2":  ["Junior Software Engineer", "Software Developer"],
+          "3-5":  ["Software Engineer", "Full Stack Developer", "Backend Engineer"],
+          "6-9":  ["Senior Software Engineer", "Staff Engineer", "Tech Lead"],
+          "10+":  ["Principal Engineer", "Engineering Manager", "VP Engineering"]
+        }
+      },
+  
+      "devops_cloud": {
+        "skill_signals": [
+          "aws", "azure", "gcp", "google cloud", "terraform", "ansible",
+          "jenkins", "devops", "sre", "site reliability", "helm",
+          "prometheus", "grafana", "cloud infrastructure", "cloud computing",
+          "infrastructure as code", "iac", "cloudformation", "pulumi",
+          "linux", "bash", "shell scripting", "monitoring", "observability",
+          "eks", "ecs", "gke", "aks", "vpc", "networking"
+        ],
+        "titles_by_years": {
+          "0-2":  ["Junior DevOps Engineer", "Cloud Support Engineer"],
+          "3-5":  ["DevOps Engineer", "Cloud Engineer", "Platform Engineer", "MLOps Engineer"],
+          "6-9":  ["Senior DevOps Engineer", "Cloud Architect", "SRE Lead", "Senior MLOps Engineer"],
+          "10+":  ["Principal Cloud Architect", "Head of Platform Engineering", "VP Infrastructure"]
+        }
+      },
+  
+      "analytics_bi": {
+        "skill_signals": [
+          "sql", "tableau", "power bi", "looker", "excel", "business intelligence",
+          "data analysis", "reporting", "dashboard", "analytics",
+          "google analytics", "mixpanel", "amplitude", "metabase",
+          "data visualization", "data viz", "qlik", "sap",
+          "business analysis", "stakeholder", "kpi", "metrics"
+        ],
+        "titles_by_years": {
+          "0-2":  ["Data Analyst", "Business Intelligence Analyst", "Reporting Analyst"],
+          "3-5":  ["Senior Data Analyst", "BI Developer", "Analytics Manager", "Insights Analyst"],
+          "6-9":  ["Lead Analytics Engineer", "Head of Analytics", "Director of Analytics"],
+          "10+":  ["VP of Analytics", "VP Data", "Chief Analytics Officer"]
+        }
+      },
+  
+      "finance": {
+        "skill_signals": [
+          "financial modeling", "valuation", "bloomberg", "investment",
+          "portfolio", "risk management", "derivatives", "equity", "banking",
+          "cfa", "financial analysis", "p&l", "budget", "forecasting",
+          "treasury", "credit", "hedge fund", "private equity", "venture capital",
+          "accounting", "ifrs", "gaap", "financial reporting"
+        ],
+        "titles_by_years": {
+          "0-2":  ["Financial Analyst", "Investment Analyst", "Finance Associate"],
+          "3-5":  ["Senior Financial Analyst", "Risk Analyst", "Investment Associate"],
+          "6-9":  ["Finance Manager", "Investment Manager", "VP Finance", "Portfolio Manager"],
+          "10+":  ["CFO", "Director of Finance", "Managing Director", "Chief Risk Officer"]
+        }
+      },
+  
+      "product_management": {
+        "skill_signals": [
+          "product roadmap", "agile", "scrum", "user stories", "jira",
+          "product strategy", "go-to-market", "okr", "product manager",
+          "product owner", "backlog", "sprint", "user research",
+          "a/b testing", "product metrics", "product analytics",
+          "customer discovery", "market research", "competitive analysis"
+        ],
+        "titles_by_years": {
+          "0-2":  ["Associate Product Manager", "Product Analyst"],
+          "3-5":  ["Product Manager", "Senior Product Manager"],
+          "6-9":  ["Group Product Manager", "Director of Product", "Head of Product"],
+          "10+":  ["VP Product", "Chief Product Officer", "CPO"]
+        }
+      },
+  
+      "healthcare": {
+        "skill_signals": [
+          "clinical", "nursing", "pharmacist", "ehr", "hospital", "patient",
+          "medical", "healthcare", "physician", "surgeon",
+          "claims", "medical coding", "icd", "cpt", "fwa", "fraud waste abuse",
+          "clinical data", "health informatics", "medical imaging",
+          "drug discovery", "clinical trials", "regulatory"
+        ],
+        "titles_by_years": {
+          "0-2":  ["Healthcare Analyst", "Clinical Data Analyst", "Health Informatics Analyst"],
+          "3-5":  ["Senior Healthcare Analyst", "Clinical Data Scientist", "Health Data Scientist"],
+          "6-9":  ["Lead Health Data Scientist", "Senior Clinical Data Scientist", "Healthcare AI Lead"],
+          "10+":  ["Head of Health AI", "Director of Clinical Analytics", "Chief Medical Informatics Officer"]
+        }
+      },
+  
+      "semiconductor_hardware": {
+        "skill_signals": [
+          "semiconductor", "vlsi", "verilog", "vhdl", "fpga", "asic",
+          "embedded", "firmware", "rtl", "silicon", "chip design",
+          "signal processing", "pcb", "schematic", "eda", "cadence",
+          "synopsys", "analog", "digital design", "power electronics"
+        ],
+        "titles_by_years": {
+          "0-2":  ["Junior Hardware Engineer", "Embedded Engineer"],
+          "3-5":  ["Hardware Engineer", "VLSI Engineer", "Embedded Systems Engineer"],
+          "6-9":  ["Senior Hardware Engineer", "Lead VLSI Engineer", "Senior Embedded Engineer"],
+          "10+":  ["Principal Hardware Engineer", "Hardware Architect", "VP Engineering"]
+        }
+      },
+  
+      "cybersecurity": {
+        "skill_signals": [
+          "cybersecurity", "security", "penetration testing", "pen test",
+          "soc", "siem", "vulnerability", "threat", "incident response",
+          "zero trust", "iam", "identity", "encryption", "firewall",
+          "compliance", "iso 27001", "nist", "gdpr", "appsec",
+          "devsecops", "owasp", "cve", "malware", "forensics"
+        ],
+        "titles_by_years": {
+          "0-2":  ["Security Analyst", "SOC Analyst", "Junior Security Engineer"],
+          "3-5":  ["Security Engineer", "Penetration Tester", "Information Security Analyst"],
+          "6-9":  ["Senior Security Engineer", "Security Architect", "Lead Security Engineer"],
+          "10+":  ["Principal Security Architect", "CISO", "Head of Cybersecurity"]
+        }
+      }
+    }
+  }

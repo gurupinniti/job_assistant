@@ -1,0 +1,31 @@
+{
+    "_description": "ATS scoring rules used to score resumes without calling LLM when skills are clearly present/absent. LLM is only called when keyword overlap is ambiguous.",
+    "_version": "1.0",
+  
+    "section_weights": {
+      "skills_match":      40,
+      "experience_match":  30,
+      "title_match":       15,
+      "education_match":   10,
+      "format_score":       5
+    },
+  
+    "instant_pass_threshold": 85,
+    "instant_fail_threshold": 30,
+  
+    "red_flags": [
+      "employment gap > 2 years without explanation",
+      "no quantified achievements in experience",
+      "skills listed but not demonstrated in experience",
+      "education section missing",
+      "no contact information"
+    ],
+  
+    "green_flags": [
+      "quantified achievements (%, $, x improvement)",
+      "progressive career growth",
+      "relevant certifications",
+      "skills match > 70% of JD requirements",
+      "recent experience at known companies"
+    ]
+  }

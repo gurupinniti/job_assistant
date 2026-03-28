@@ -1,0 +1,79 @@
+# ╔══════════════════════════════════════════════════════════════╗
+# ║  QuickJob Applier — Backend Requirements                     ║
+# ║  Install: pip install -r requirements.txt                    ║
+# ║  Playwright: python -m playwright install chromium           ║
+# ╚══════════════════════════════════════════════════════════════╝
+
+# ── Web API ───────────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+python-multipart          # for file uploads (multipart/form-data)
+
+# ── PDF extraction (resume parsing) ──────────────────────────
+pdfplumber                # primary — best text + hyperlink extraction
+pypdf                     # fallback text extractor
+pymupdf                   # surgical PDF editing (import as fitz)
+                          # required for in-place resume enhancement
+
+# ── PDF generation (cover letter output) ─────────────────────
+fpdf2                     # generates cover letter PDFs
+
+# ── DOCX support (optional resume format) ────────────────────
+python-docx
+
+# ── Browser automation (RPA apply) ───────────────────────────
+playwright
+# After install, run ONCE:
+#   python -m playwright install chromium
+#   python -m playwright install-deps chromium   (Linux only)
+
+# ── LangChain core ───────────────────────────────────────────
+langchain-core
+langchain
+langgraph
+
+# ── LLM provider integrations ────────────────────────────────
+langchain-google-genai    # Gemini (free tier, best embeddings)
+langchain-openai          # OpenAI GPT + text-embedding-3-small
+langchain-anthropic       # Claude (fallback)
+langchain-groq            # Groq llama (free, 100k tokens/day)
+langchain-community       # misc community tools
+
+# ── LLM provider SDKs ────────────────────────────────────────
+google-generativeai       # required by langchain-google-genai
+openai                    # required by langchain-openai
+anthropic                 # required by langchain-anthropic
+
+# ── Vector DB — LLM response cache + resume cache ────────────
+chromadb                  # persistent vector store
+                          # stores: llm_cache/ and resume cache
+# NOTE: No sentence-transformers — embeddings use active LLM:
+#   OPENAI_API_KEY  → text-embedding-3-small  (best, ~free)
+#   GEMINI_API_KEY  → models/embedding-001    (free tier)
+#   Neither         → hash-based fallback     (exact match only)
+
+# ── HTTP / async ──────────────────────────────────────────────
+requests
+aiohttp
+
+# ── Utilities ─────────────────────────────────────────────────
+pydantic
+python-dotenv
+
+reportlab
+# ══════════════════════════════════════════════════════════════
+#  API Keys needed in config.py (never commit this file to git)
+# ══════════════════════════════════════════════════════════════
+#
+#  REQUIRED (minimum to run):
+#    GROQ_API_KEY      = "gsk_..."    # free at console.groq.com
+#
+#  RECOMMENDED (more + better job listings):
+#    SERPER_API_KEY    = "..."        # free 2500/mo at serper.dev
+#    ADZUNA_APP_ID     = "..."        # free 1000/day at developer.adzuna.com
+#    ADZUNA_APP_KEY    = "..."        # free 1000/day at developer.adzuna.com
+#
+#  OPTIONAL (better caching + LLM fallbacks):
+#    GEMINI_API_KEY    = "AIza..."    # free tier at aistudio.google.com
+#    OPENAI_API_KEY    = "sk-..."     # paid — best embeddings
+#    CLAUDE_API_KEY    = "sk-ant-..." # paid — LLM fallback
