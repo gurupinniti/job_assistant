@@ -111,6 +111,20 @@ def create_llm():
     except Exception as e:
         log_fallback("Claude", str(e), "none")
 
+    # ── 5. Tinyfish LLM (final fallback) ─────────────────────────────────────
+    print("  [5/5] Trying Tinyfish LLM as final fallback...")
+    try:
+        from tools.tinyfish_llm import TinyfishLLM
+        if getattr(config, "TINYFISH_API_KEY", ""):
+            model = TinyfishLLM(api_key=config.TINYFISH_API_KEY)
+            # Test call to ensure it works (simulate LLM interface)
+            model.invoke("hi", goal="Echo this message as JSON with key 'message'.")
+            print("  [OK] Tinyfish LLM fallback")
+            return model
+        else:
+            print("  [SKIP] Tinyfish — TINYFISH_API_KEY not set")
+    except Exception as e:
+        log_fallback("Tinyfish LLM", str(e), "none")
     raise RuntimeError(
         "All LLM providers exhausted.\n"
         "Primary: Groq free tier (100k tokens/day) — resets on a rolling 24h window.\n"
@@ -118,7 +132,8 @@ def create_llm():
         "  1. Wait for Groq quota to reset (check time in the error above)\n"
         "  2. Add OPENAI_API_KEY to config.py (paid)\n"
         "  3. Add GEMINI_API_KEY to config.py (free at aistudio.google.com)\n"
-        "  4. Upgrade Groq at console.groq.com/settings/billing"
+        "  4. Upgrade Groq at console.groq.com/settings/billing\n"
+        "  5. Add TINYFISH_API_KEY to config.py for fallback LLM.\n"
     )
 
 # ---------------------------------------------------------------------------
